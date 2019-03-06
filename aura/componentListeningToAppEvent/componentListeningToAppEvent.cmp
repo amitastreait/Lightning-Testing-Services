@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="message" type="String" />
+    <aura:handler event="c:myAppEvent" action="{!c.handleAppEvent}" />
+    <div>
+        {!v.message}
+    </div>
+    <lightning:card variant="Narrow" title="Narrow Card Header" iconName="standard:account" footer="Card Footer">
+        <aura:set attribute="actions">
+            <lightning:buttonIcon iconName="utility:down" variant="border-filled" alternativeText="Show More"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            {!v.message}
+        </p>
+    </lightning:card>
+</aura:component>

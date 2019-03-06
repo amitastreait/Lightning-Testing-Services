@@ -1,0 +1,13 @@
+<aura:component controller="AccountController">
+    <aura:attribute name="accounts" type="Account[]" />
+    <aura:method name="loadAccounts" action="{!c.loadAccounts}" />
+
+    <div class="slds-grip slds-wrap">
+        <aura:iteration items="{!v.accounts}" var="account">
+            <lightning:icon iconName="standard:account" size="small">
+
+            </lightning:icon>
+            &nbsp; &nbsp; {!account.Name}
+        </aura:iteration>
+    </div>
+</aura:component>
